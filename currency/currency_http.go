@@ -51,7 +51,7 @@ func (factory *CurrencyHttp) SaveCurrency(dateString string) httpLib.Endpoint {
 
 func (factory *CurrencyHttp) FindCurrencies() httpLib.Endpoint {
 	return func(w http.ResponseWriter, r *http.Request) httpLib.Response {
-
+		//В тз указано, что дата и код - параметры
 		var pointers CurrencyPointers
 		if r.URL.Query().Has("date") {
 			q := r.URL.Query().Get("date")
